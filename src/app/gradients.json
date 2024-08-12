@@ -1,0 +1,25 @@
+{
+	"gradients": [
+		{
+			"gradient": "linear-gradient(#7C72FF, #2DA44E 80%, #3FB950)"
+		},
+		{
+			"gradient": "radial-gradient(circle, #FF6B6B, #FFA500, #FFFF00)"
+		},
+		{
+			"gradient": "linear-gradient(to right, #87CEEB, #1E90FF, #00BFFF)"
+		},
+		{
+			"gradient": "conic-gradient(#FF7F50, #FF4500, #FFFF00, #FF7F50)"
+		},
+		{
+			"gradient": "linear-gradient(45deg, #FFC0CB, #E6E6FA, #AFEEEE)"
+		},
+		{
+			"gradient": "radial-gradient(ellipse, #808080, #A9A9A9, #D3D3D3)"
+		},
+		{
+			"gradient": "conic-gradient(from 180deg, #008000, #00B300, #00FF00, #008000)"
+		}
+	]
+}
