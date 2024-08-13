@@ -4,16 +4,15 @@ import { RiReactjsLine } from "react-icons/ri"
 import 'swiper/css'
 import 'swiper/css/pagination'
 import { Mousewheel, Pagination } from 'swiper/modules'
+import type { SwiperClass } from 'swiper/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import gradients from "./gradients.json"
 import "./styles.css"
-
 export default function Home() {
-
   const [lastSlideIndex, setLastSlideIndex] = useState(0)
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: SwiperClass): void => {
     const currentIndex = swiper.realIndex
-    const slides = swiper.slides
+    const slides: HTMLElement[] = swiper.slides
 
     const isForward = currentIndex > lastSlideIndex
 
@@ -32,28 +31,24 @@ export default function Home() {
     const nextSlideAnimationDown = slides[currentIndex - 1]?.querySelector("._down")
 
 
-    const nextIcon = slides[currentIndex + 1]?.querySelector('.icon')
-    const prevIcon = slides[currentIndex - 1]?.querySelector('.icon')
-
-
     currentSlidePoloskasTop.forEach(el => {
       if (isForward) {
         el.classList.add('animation_down')
-        nextSlideAnimationTop.classList.add("animation_up_next")
+        nextSlideAnimationTop?.classList.add("animation_up_next")
 
       } else {
         el.classList.add('animation_up')
-        prevSlideAnimationTop.classList.add("animation_down_next")
+        prevSlideAnimationTop?.classList.add("animation_down_next")
       }
     })
     currentSlidePoloskasDown.forEach(el => {
       if (isForward) {
         el.classList.add('animation_up')
-        nextSlideAnimationDown.classList.add("animation_down_next")
+        nextSlideAnimationDown?.classList.add("animation_down_next")
 
       } else {
         el.classList.add('animation_down')
-        prevSlideAnimationDown.classList.add("animation_up_next")
+        prevSlideAnimationDown?.classList.add("animation_up_next")
       }
     })
     setLastSlideIndex(currentIndex)
