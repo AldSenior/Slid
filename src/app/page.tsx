@@ -37,7 +37,7 @@ export default function Home() {
         nextSlideAnimationTop?.classList.add("animate-animation_up_next")
 
       } else {
-        el.classList.add('animation_up')
+        el.classList.add('animate-animation_up')
         prevSlideAnimationTop?.classList.add("animate-animation_down_next")
       }
     })
@@ -55,7 +55,7 @@ export default function Home() {
   }
   return (
     <Swiper
-      className='w-screen h-screen'
+      className='w-screen h-screen '
       speed={2500}
       touchReleaseOnEdges={true}
       freeMode={false}
@@ -71,7 +71,7 @@ export default function Home() {
         <SwiperSlide
           className='flex items-center justify-center text-center text-9xl bg-black h-screen '
           key={index} >
-          <div className='poloska_container absolute left-12 flex flex-col flex-direction-important items-center  h-screen'>
+          <div className='poloska_container absolute left-12 flex flex-direction-important items-center  h-screen'>
             <span
               className={`poloska _top w-[5]px`}
               style={{ background: `${gradients.gradients[index].gradient}` }}></span>

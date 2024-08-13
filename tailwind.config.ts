@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import type { PluginCreator } from 'tailwindcss/types/config'
 const plugin = require('tailwindcss/plugin')
 
 const config: Config = {
@@ -23,7 +24,7 @@ const config: Config = {
             height: '50vh',
           },
         },
-        'redanim-next': {
+        redanim_next: {
           '0%': {
             height: '50vh',
           },
@@ -39,7 +40,7 @@ const config: Config = {
             height: '50vh',
           },
         },
-        'redanimup-next': {
+        redanimup_next: {
           '0%': {
             height: '50vh',
           },
@@ -78,9 +79,9 @@ const config: Config = {
       },
       animation: {
         'animation_down': 'redanim 1.1s ease-in-out both 1s',
-        'animation_down_next': 'redanim-next 1.1s ease-in-out both .25s',
+        'animation_down_next': 'redanim_next 1.1s ease-in-out both .25s',
         'animation_up': 'redanimup 1.1s ease-in-out both 1s',
-        'animation_up_next': 'redanimup-next 1.1s ease-in-out both .25s',
+        'animation_up_next': 'redanimup_next 1.1s ease-in-out both .25s',
         'hide_icon_stolb': 'hide 1.5s both',
         'visible_icon_stolb': 'visible 1.5s both',
         'rotate_logo': 'rot 3.5s both 0.5s',
@@ -106,8 +107,7 @@ const config: Config = {
         boxShadow: "0px 0px 25px #5c54ca"
       }
     }
-
     addUtilities(newUtilities, ['responsive', 'hover'])
-  })],
+  } as PluginCreator)],
 }
 export default config
